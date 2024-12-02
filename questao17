@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço de Venda</title>
+    <script>
+        function calcularPrecoVenda() {
+            var valorCompra = parseFloat(document.getElementById("valorCompra").value);
+
+            if (isNaN(valorCompra) || valorCompra <= 0) {
+                alert("Por favor, insira um valor de compra válido.");
+            } else {
+                var percentualLucro;
+
+                if (valorCompra < 20) {
+                    percentualLucro = 45; 
+                } else {
+                    percentualLucro = 30; 
+                }
+
+                var lucro = valorCompra * (percentualLucro 
+                var valorVenda = valorCompra + lucro;
+
+               
+                alert("O valor de venda do produto será: R$ " + valorVenda.toFixed(2));
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Calcular Preço de Venda</h1>
+    
+    <label for="valorCompra">Digite o valor de compra do produto:</label>
+    <input type="text" id="valorCompra" placeholder="Valor de compra"><br><br>
+
+    <button onclick="calcularPrecoVenda()">Calcular Preço de Venda</button>
+</body>
+</html>
