@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajuste de Produto</title>
+    <script>
+        function calcularReajuste() {
+            var valorProduto = parseFloat(document.getElementById("valorProduto").value);
+
+            var reajuste = valorProduto * 0.3333;
+            var valorCorrigido = valorProduto + reajuste; 
+
+            document.getElementById("resultado").innerHTML = "Valor original: R$ " + valorProduto.toFixed(2) + "<br>" +
+                                                                "Reajuste de 33,33%: R$ " + reajuste.toFixed(2) + "<br>" +
+                                                                "Valor corrigido: R$ " + valorCorrigido.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculadora de Reajuste de Produto</h1>
+
+    <label for="valorProduto">Digite o valor do produto: </label>
+    <input type="number" id="valorProduto" placeholder="Valor do produto" required><br><br>
+
+    <button onclick="calcularReajuste()">Calcular Reajuste</button>
+
+    <p id="resultado"></p>
+</body>
+</html>
