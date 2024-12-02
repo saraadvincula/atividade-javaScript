@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação de Nadador</title>
+    <script>
+        function classificarNadador() {
+            var idade = parseInt(document.getElementById("idade").value);
+
+            if (isNaN(idade)) {
+                alert("Por favor, insira uma idade válida.");
+            } else {
+                var categoria;
+                if (idade >= 18) {
+                    categoria = "Adulto";
+                } else if (idade >= 14) {
+                    categoria = "Juvenil";
+                } else if (idade >= 9) {
+                    categoria = "Infantil";
+                } else {
+                    categoria = "Mirim";
+                }
+
+                alert("O nadador de " + idade + " anos é classificado como: " + categoria);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Classificação de Nadador</h1>
+    
+    <label for="idade">Digite a idade do nadador:</label>
+    <input type="text" id="idade" placeholder="Idade do nadador"><br><br>
+
+    <button onclick="classificarNadador()">Classificar</button>
+</body>
+</html>
