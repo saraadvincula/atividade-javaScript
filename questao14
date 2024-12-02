@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior Número</title>
+    <script>
+        function encontrarMaiorNumero() {
+       
+            var numero1 = parseFloat(document.getElementById("numero1").value);
+            var numero2 = parseFloat(document.getElementById("numero2").value);
+            var numero3 = parseFloat(document.getElementById("numero3").value);
+
+            if (isNaN(numero1) || isNaN(numero2) || isNaN(numero3)) {
+                alert("Por favor, insira três números válidos.");
+            } else {
+                var maiorNumero = numero1; 
+                if (numero2 > maiorNumero) {
+                    maiorNumero = numero2; 
+                }
+                if (numero3 > maiorNumero) {
+                    maiorNumero = numero3; 
+
+             
+                alert("O maior número é: " + maiorNumero);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Verificar Maior Número</h1>
+    
+    <label for="numero1">Digite o primeiro número:</label>
+    <input type="text" id="numero1" placeholder="Número 1"><br><br>
+
+    <label for="numero2">Digite o segundo número:</label>
+    <input type="text" id="numero2" placeholder="Número 2"><br><br>
+
+    <label for="numero3">Digite o terceiro número:</label>
+    <input type="text" id="numero3" placeholder="Número 3"><br><br>
+
+    <button onclick="encontrarMaiorNumero()">Descobrir o Maior</button>
+</body>
+</html>
