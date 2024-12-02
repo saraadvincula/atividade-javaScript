@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Aprovação</title>
+    <script>
+        function calcularMedia() {
+            var nota1 = parseFloat(document.getElementById("nota1").value);
+            var nota2 = parseFloat(document.getElementById("nota2").value);
+            var nota3 = parseFloat(document.getElementById("nota3").value);
+
+            var media = (nota1 + nota2 + nota3) 
+
+            if (media >= 7) {
+                document.getElementById("resultado").innerHTML = "ALUNO APROVADO. Média: " + media.toFixed(2);
+            } else {
+                document.getElementById("resultado").innerHTML = "ALUNO REPROVADO. Média: " + media.toFixed(2);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Verificação de Aprovação</h1>
+
+    <label for="nota1">Digite a primeira nota: </label>
+    <input type="number" id="nota1" placeholder="Nota 1" required><br><br>
+
+    <label for="nota2">Digite a segunda nota: </label>
+    <input type="number" id="nota2" placeholder="Nota 2" required><br><br>
+
+    <label for="nota3">Digite a terceira nota: </label>
+    <input type="number" id="nota3" placeholder="Nota 3" required><br><br>
+
+    <button onclick="calcularMedia()">Calcular Média</button>
+
+    <p id="resultado"></p>
+</body>
+</html>
